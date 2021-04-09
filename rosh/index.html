@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+	<form method="post">
+    <label for="name">Nom</label>
+    <input id="name" type="text" name="name" value="">
+    <br>
+    <label for="Email">votre mail</label>
+    <input id="email" type="email" name="email" value="">
+    <br>
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript">
+
+      function sendEmail() {
+      var email = document.getElementById("email").value;
+      var name = document.getElementById("name").value;
+
+
+      console.log(email);
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username : "birotori@gmail.com",
+          Password : "BF11C4EBFB85558D6370F8FB91682AC953B8",
+          To : ""+ email +",acserviceclient@hotmail.com,fhafricaconnecte@hotmail.com,rbafricaconnecte@hotmail.com",
+          From : "africaconnecte@gmail.com",
+          Subject : "BON D'achat",
+          Body : '<html><h2>Nom :'+name+'</h2><strong>email :'+email+'</strong><br></br><em>Ok</em></html>'
+        })
+        .then(function(message){
+          alert("mail sent successfully")
+        });
+      }
+
+
+  </script>
+</body>
+</html>

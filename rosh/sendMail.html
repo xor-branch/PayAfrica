@@ -1,0 +1,19 @@
+function sendEmail() {
+  var nom_benef = document.getElementById("description").value;
+  var pays = document.getElementById("contry").value;
+  var montant_cfa = document.getElementById("montant_cfa").value;
+  var email = document.getElementById("email").value;
+  var montant_euro = document.getElementById("amount").value;
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username : "birotori@gmail.com",
+    Password : "BF11C4EBFB85558D6370F8FB91682AC953B8",
+    To : 'birotori@gmail.com,acserviceclient@hotmail.com,fhafricaconnecte@hotmail.com,rbafricaconnecte@hotmail.com',
+    From : "africaconnecte@gmail.com",
+    Subject : "Nouvel Commande | BON D'ACHAT",
+    Body : '<html><h2>Nom du bénéficiaire :'+nom_benef+'</h2><p>Pays d\'envoie:'+pays+'</p><strong>Montant en CFA:'+montant_cfa+'</strong><br><strong>Montant en Euro :'+montant_euro+'</strong><br><strong>email :'+email+'</strong><br><em>Félicitation pour cette vente</em></html>'
+  })
+  .then(function(message){
+    alert("Paiement reussi")
+  });
+};

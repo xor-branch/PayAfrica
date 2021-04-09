@@ -1,0 +1,27 @@
+{
+    "name": "Pay.Africaconnecte",
+    "short_name": "PayAfricaconnecte",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "black",
+    "theme_color": "black",
+    "orientation" : "portrait-primary",
+    "icons":[
+        {
+            "src":"images/flav/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src":"images/flav/android-chrome-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src":"images/flav/apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        }
+    ]
+}
